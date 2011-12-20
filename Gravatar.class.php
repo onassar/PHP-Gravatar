@@ -10,7 +10,7 @@
      * @abstract
      * @example
      * <code>
-     *     require_once APP . '/open/PHP-Gravatar/Gravatar.class.php';
+     *     require_once APP . '/vendors/PHP-Gravatar/Gravatar.class.php';
      *     $email = 'onassar@gmail.com';
      *     $image = Gravatar::getImage($email);
      *     echo '<img src="' . ($image) . '" />';
