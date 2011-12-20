@@ -1,9 +1,21 @@
 <?php
 
     /**
-     * Abstract Gravatar class.
-     * 
+     * Gravatar
+     *
+     * Small helper to help generate the image path for Gravatars, based on a
+     * default image and a source's email address.
+     *
+     * @author   Oliver Nassar <onassar@gmail.com>
      * @abstract
+     * @example
+     * <code>
+     *     require_once APP . '/open/PHP-Gravatar/Gravatar.class.php';
+     *     $email = 'onassar@gmail.com';
+     *     $image = Gravatar::getImage($email);
+     *     echo '<img src="' . ($image) . '" />';
+     *     exit(0);
+     * </code>
      */
     abstract class Gravatar
     {
@@ -47,5 +59,3 @@
             self::$_default = $path;
         }
     }
-
-?>
