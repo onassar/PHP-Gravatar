@@ -10,9 +10,12 @@
      * @abstract
      * @example
      * <code>
+     *     // dependency
      *     require_once APP . '/vendors/PHP-Gravatar/Gravatar.class.php';
+     * 
+     *     // grab path for associated email; output image
      *     $email = 'onassar@gmail.com';
-     *     $image = Gravatar::getImage($email);
+     *     $image = Gravatar::getImagePath($email);
      *     echo '<img src="' . ($image) . '" />';
      *     exit(0);
      * </code>
@@ -24,22 +27,22 @@
          * 
          * (default value: 'http://i.imgur.com/WxslI.jpg')
          * 
-         * @var string
+         * @var    string
          * @access protected
          * @static
          */
         protected static $_default = 'http://i.imgur.com/WxslI.jpg';
 
         /**
-         * getImage function.
+         * getImagePath
          * 
          * @access public
          * @static
-         * @param string $email
-         * @param int $size. (default: 50)
+         * @param  string $email
+         * @param  integer $size. (default: 50)
          * @return string
          */
-        public static function getImage($email, $size = 50)
+        public static function getImagePath($email, $size = 50)
         {
             return ('http://www.gravatar.com/avatar/') .
                 md5(strtolower($email)) . ('?default=') .
@@ -47,11 +50,11 @@
         }
 
         /**
-         * setDefault function.
+         * setDefault
          * 
          * @access public
          * @static
-         * @param string $path
+         * @param  string $path
          * @return void
          */
         public static function setDefault($path)
