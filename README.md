@@ -8,6 +8,9 @@ execution.
 
 ### Sample Image Output
 
+``` php
+<?php
+
     // dependency
     require_once APP . '/vendors/PHP-Gravatar/Gravatar.class.php';
     
@@ -16,3 +19,5 @@ execution.
     $image = Gravatar::getImagePath($email);
     echo '<img src="' . ($image) . '" />';
     exit(0);
+
+```
